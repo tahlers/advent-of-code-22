@@ -4,7 +4,7 @@ import io.vavr.kotlin.toVavrList
 import io.vavr.kotlin.tuple
 import java.lang.IllegalArgumentException
 
-enum class RPCGame(val baseValue: Int) {
+enum class RPCGame(private val baseValue: Int) {
     ROCK(1),
     PAPER(2),
     SCISSORS(3);

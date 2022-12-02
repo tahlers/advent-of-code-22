@@ -11,11 +11,10 @@ object Day01 {
         return calcHighest(caloriesList, 0, 0)
     }
 
-    tailrec fun calcHighest(inputList: List<Int>, currentCount: Int, highest: Int): Int {
+    private tailrec fun calcHighest(inputList: List<Int>, currentCount: Int, highest: Int): Int {
         if (inputList.isEmpty) return highest
-        val head = inputList.head()
-        return when {
-            head == 0 -> calcHighest(inputList.tail(), 0, max(currentCount, highest))
+        return when (val head = inputList.head()) {
+            0 -> calcHighest(inputList.tail(), 0, max(currentCount, highest))
             else -> calcHighest(inputList.tail(), currentCount + head, highest)
         }
     }
@@ -27,14 +26,17 @@ object Day01 {
         return elfCalories.sorted().reverse().take(3).sum().toInt()
     }
 
-    tailrec fun toCalPerElf(input: List<Int>, currentCount: Int = 0, resultList: List<Int> = List.empty()): List<Int> {
+    private tailrec fun toCalPerElf(
+        input: List<Int>,
+        currentCount: Int = 0,
+        resultList: List<Int> = List.empty()
+    ): List<Int> {
         if (input.isEmpty) return resultList.prepend(currentCount)
         val head = input.head()
         val tail = input.tail()
-        return when {
-            head == 0 -> toCalPerElf(tail, 0, resultList.prepend(currentCount))
+        return when (head) {
+            0 -> toCalPerElf(tail, 0, resultList.prepend(currentCount))
             else -> toCalPerElf(tail, currentCount + head, resultList)
         }
     }
-
 }
