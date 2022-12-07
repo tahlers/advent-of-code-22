@@ -35,6 +35,6 @@ class Day06Test : FunSpec({
     test("calculate solution two") {
         val input = this.javaClass.getResource("/day06.txt")!!.readText()
         val result = Day06.calcStartOfDistinctChars(input, 14)
-        result shouldBe 1142
+        result shouldBe 2803
     }
 })
