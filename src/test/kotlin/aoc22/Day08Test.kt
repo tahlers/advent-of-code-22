@@ -32,6 +32,6 @@ class Day08Test : FunSpec({
     test("calculate solution two") {
         val input = this.javaClass.getResource("/day08.txt")!!.readText()
         val result = Day08.calculateScenicScore(input)
-        result shouldBe 1849
+        result shouldBe 201600
     }
 })
