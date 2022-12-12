@@ -32,6 +32,6 @@ class Day12Test : FunSpec({
     test("calculate solution two") {
         val input = this.javaClass.getResource("/day12.txt")!!.readText()
         val result = Day12.calcMinStepsBack(input)
-        result shouldBe 0
+        result shouldBe 332
     }
 })
