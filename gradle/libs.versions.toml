@@ -4,6 +4,7 @@ kotest = "5.5.4"
 [libraries]
 vavr = "io.vavr:vavr:0.10.4"
 vavr-kotlin = "io.vavr:vavr-kotlin:0.10.2"
+lanterna = "com.googlecode.lanterna:lanterna:3.1.1"
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest"}
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest"}
 

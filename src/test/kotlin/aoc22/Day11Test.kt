@@ -48,12 +48,12 @@ class Day11Test : FunSpec({
 
     test("calculate monkey business level after 10000 rounds") {
         val result = Day11.calculateMonkeyBusinessLevel(sample, 10000, false)
-        result shouldBe 2713310158
+        result shouldBe 2713310158L
     }
 
     test("calculate solution two") {
         val input = this.javaClass.getResource("/day11.txt")!!.readText()
         val result = Day11.calculateMonkeyBusinessLevel(input, 10000, false)
-        result shouldBe 112815
+        result shouldBe 25738411485L
     }
 })

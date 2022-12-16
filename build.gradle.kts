@@ -15,6 +15,7 @@ repositories {
 dependencies {
     implementation(libs.vavr)
     implementation(libs.vavr.kotlin)
+    implementation(libs.lanterna)
     testImplementation(libs.kotest.runner.junit5)
     testImplementation(libs.kotest.assertions.core)
 }
